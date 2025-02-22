@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj": {}
+    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj": {}
   },
   "projects": {
-    "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj": {
+    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
+        "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
         "projectName": "iteraBus.Api",
-        "projectPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\obj\\",
+        "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
+        "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
+        "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
