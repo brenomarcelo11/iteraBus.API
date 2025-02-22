@@ -30,8 +30,8 @@ namespace iteraBus.Repositorio
         public async Task<Onibus> ObterOnibusPorIdAsync(int onibusId)
         {
             return await _contexto.Onibus
-            .Where(o => o.Id == onibusId)
-            .FirstOrDefaultAsync();
+                        .Where(o => o.Id == onibusId)
+                        .FirstOrDefaultAsync();
         }
     }
 }
