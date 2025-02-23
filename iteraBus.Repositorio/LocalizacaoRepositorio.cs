@@ -8,7 +8,7 @@ namespace iteraBus.Repositorio
     public class LocalizacaoRepositorio : BaseRepositorio, ILocalizacaoRepositorio
     {
         public LocalizacaoRepositorio(IteraBusContexto contexto) : base(contexto)
-        { }
+        {}
 
         public async Task<int> AdicionarLocalizacaoAsync(Localizacao localizacao)
         {
@@ -35,5 +35,4 @@ namespace iteraBus.Repositorio
                         .FirstOrDefaultAsync();
         }
     }
-
 }
