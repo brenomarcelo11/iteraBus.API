@@ -1,9 +1,11 @@
 using iteraBus.Dominio.Entidades;
 using iteraBus.Repositorio.Contexto;
+using iteraBus.Repositorio.Inteface;
+using Microsoft.EntityFrameworkCore;
 
 namespace iteraBus.Repositorio
 {
-    public class RotaRepositorio : BaseRepositorio
+    public class RotaRepositorio : BaseRepositorio, IRotaRepositorio
     {
         public RotaRepositorio(IteraBusContexto contexto) : base(contexto)
         {
@@ -20,6 +22,18 @@ namespace iteraBus.Repositorio
         {
             _contexto.Rotas.Update(rota);
             await _contexto.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<Rota>> ListarRotasAsync()
+        {
+            return await _contexto.Rotas.ToListAsync();
+        }
+
+        public async Task<Rota> ObterRotaPorIdAsync(int rotaId)
+        {
+            return await _contexto.Rotas
+                .Where(r => r.Id == rotaId)
+                .FirstOrDefaultAsync();
         }
 
     }

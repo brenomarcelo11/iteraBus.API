@@ -1,10 +1,11 @@
 using iteraBus.Dominio.Entidades;
 using iteraBus.Repositorio.Contexto;
+using iteraBus.Repositorio.Inteface;
 using Microsoft.EntityFrameworkCore;
 
 namespace iteraBus.Repositorio
 {
-    public class LocalizacaoRepositorio : BaseRepositorio
+    public class LocalizacaoRepositorio : BaseRepositorio, ILocalizacaoRepositorio
     {
         public LocalizacaoRepositorio(IteraBusContexto contexto) : base(contexto)
         { }
