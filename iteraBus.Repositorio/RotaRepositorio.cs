@@ -21,6 +21,11 @@ namespace iteraBus.Repositorio
         public async Task EditarRotaAsync(Rota rota)
         {
             _contexto.Rotas.Update(rota);
+
+            foreach (var onibus in rota.Onibus)
+            {
+                _contexto.Onibus.Update(onibus); 
+            }
             await _contexto.SaveChangesAsync();
         }
 
