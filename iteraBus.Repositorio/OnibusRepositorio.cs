@@ -1,10 +1,11 @@
 using iteraBus.Dominio.Entidades;
 using iteraBus.Repositorio.Contexto;
+using iteraBus.Repositorio.Inteface;
 using Microsoft.EntityFrameworkCore;
 
 namespace iteraBus.Repositorio
 {
-    public class OnibusRepositorio : BaseRepositorio
+    public class OnibusRepositorio : BaseRepositorio, IOnibusRepositorio
     {
         public OnibusRepositorio(IteraBusContexto contexto) : base(contexto)
         {}
@@ -30,8 +31,8 @@ namespace iteraBus.Repositorio
         public async Task<Onibus> ObterOnibusPorIdAsync(int onibusId)
         {
             return await _contexto.Onibus
-            .Where(o => o.Id == onibusId)
-            .FirstOrDefaultAsync();
+                        .Where(o => o.Id == onibusId)
+                        .FirstOrDefaultAsync();
         }
     }
 }
