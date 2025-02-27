@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\iteraBus.Aplicacao\iteraBus.Aplicacao.csproj" />
+    <ProjectReference Include="..\iteraBus.Dominio\iteraBus.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

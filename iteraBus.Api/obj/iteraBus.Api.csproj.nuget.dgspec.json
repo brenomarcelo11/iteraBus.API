@@ -28,6 +28,9 @@
             "projectReferences": {
               "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {
                 "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj"
+              },
+              "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
+                "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj"
               }
             }
           }

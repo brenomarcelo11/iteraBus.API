@@ -3158,7 +3158,8 @@
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
       "Swashbuckle.AspNetCore >= 6.4.0",
-      "iteraBus.Aplicacao >= 1.0.0"
+      "iteraBus.Aplicacao >= 1.0.0",
+      "iteraBus.Dominio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3188,6 +3189,9 @@
           "projectReferences": {
             "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {
               "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj"
+            },
+            "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
+              "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj"
             }
           }
         }
