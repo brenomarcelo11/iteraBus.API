@@ -105,7 +105,6 @@ namespace iteraBus.Api.Controllers
 
                 return Ok(onibus);
             }
-
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
