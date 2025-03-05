@@ -1,0 +1,12 @@
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\bin\Debug\net8.0\iteraBus.Dominio.deps.json
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\bin\Debug\net8.0\iteraBus.Dominio.dll
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\bin\Debug\net8.0\iteraBus.Dominio.pdb
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.AssemblyInfoInputs.cache
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.AssemblyInfo.cs
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.csproj.CoreCompileInputs.cache
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.sourcelink.json
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.dll
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\refint\iteraBus.Dominio.dll
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\iteraBus.Dominio.pdb
+C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\obj\Debug\net8.0\ref\iteraBus.Dominio.dll

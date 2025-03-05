@@ -1,6 +1,7 @@
 using iteraBus.Dominio.Entidades;
 using iteraBus.Repositorio.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace iteraBus.Repositorio.Contexto
 {
@@ -21,8 +22,20 @@ namespace iteraBus.Repositorio.Contexto
         {
             if (_options == null)
             {
-                optionsBuilder.UseSqlServer("Server=DESKTOP-B4D87ME\\SQLEXPRESS01;Database=IteraBus;Trusted_Connection=True;TrustServerCertificate=True;");
+                optionsBuilder.UseSqlServer("Server=BRENO;Database=IteraBus;Trusted_Connection=True;TrustServerCertificate=True;");
             }
+        }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddDbContext<IteraBusContexto>(options =>
+                options.UseSqlServer(
+                    "Server=BRENO;Database=IteraBus;Trusted_Connection=True;TrustServerCertificate=True;",
+                    sqlOptions => sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 3,             // Número máximo de tentativas
+                        maxRetryDelay: TimeSpan.FromSeconds(5), // Tempo máximo de espera entre tentativas
+                        errorNumbersToAdd: null)      // Lista de códigos de erro específicos a serem tratados
+                ));
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
