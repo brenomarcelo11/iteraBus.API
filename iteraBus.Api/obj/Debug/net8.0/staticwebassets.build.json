@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "I48c2rJMbZOsNAfCb7xoWOYH5ydTVzDSeeKGNo/+Jb0=",
+  "Source": "iteraBus.Api",
+  "BasePath": "_content/iteraBus.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

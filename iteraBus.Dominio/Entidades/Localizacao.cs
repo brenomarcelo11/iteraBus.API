@@ -11,7 +11,7 @@ namespace iteraBus.Dominio.Entidades
 
         public Localizacao()
         {
-            Horario = DateTime.Now;
+            Horario = DateTime.UtcNow;
         }
     }
 }
