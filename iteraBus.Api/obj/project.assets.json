@@ -1072,6 +1072,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "iteraBus.Dominio": "1.0.0",
           "iteraBus.Repositorio": "1.0.0"
         },
         "compile": {
@@ -3163,19 +3164,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\breno\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
+      "projectUniqueName": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
       "projectName": "iteraBus.Api",
-      "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
-      "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-      "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Api\\obj\\",
+      "projectPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\iteraBus.Api.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3187,11 +3188,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {
-              "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj"
+            "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {
+              "projectPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj"
             },
-            "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
-              "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj"
+            "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
+              "projectPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj"
             }
           }
         }
@@ -3239,7 +3240,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

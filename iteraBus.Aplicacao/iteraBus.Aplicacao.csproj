@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\iteraBus.Repositorio\iteraBus.Repositorio.csproj" />
+    <ProjectReference Include="..\iteraBus.Dominio\iteraBus.Dominio.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

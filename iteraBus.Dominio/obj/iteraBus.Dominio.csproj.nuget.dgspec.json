@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {}
+    "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
+    "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
+        "projectUniqueName": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
         "projectName": "iteraBus.Dominio",
-        "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
-        "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-        "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\obj\\",
+        "projectPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Usuario\\Desktop\\Breno\\iteraBus.API\\iteraBus.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
