@@ -34,5 +34,12 @@ namespace iteraBus.Repositorio
                         .Where(l => l.Id == localizacaoId)
                         .FirstOrDefaultAsync();
         }
+
+        public async Task ExcluirLocalizacaoAsync(int localizacaoId)
+        {
+            var localizacaoExcluida = await _contexto.Localizacoes.FindAsync(localizacaoId);
+            _contexto.Localizacoes.Remove(localizacaoExcluida);
+            await _contexto.SaveChangesAsync();
+        }
     }
 }

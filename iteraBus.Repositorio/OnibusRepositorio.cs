@@ -34,5 +34,12 @@ namespace iteraBus.Repositorio
                         .Where(o => o.Id == onibusId)
                         .FirstOrDefaultAsync();
         }
+
+        public async Task ExcluirOnibusAsync(int onibusId)
+        {
+            var onibusExcluido = await _contexto.Onibus.FindAsync(onibusId);
+            _contexto.Onibus.Remove(onibusExcluido);
+            await _contexto.SaveChangesAsync();
+        }
     }
 }

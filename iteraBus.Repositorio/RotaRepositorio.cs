@@ -41,5 +41,12 @@ namespace iteraBus.Repositorio
                 .FirstOrDefaultAsync();
         }
 
+        public async Task ExcluirRotaAsync(int rotaId)
+        {
+            var rotaExcluida = await _contexto.Rotas.FindAsync(rotaId);
+            _contexto.Rotas.Remove(rotaExcluida);
+            await _contexto.SaveChangesAsync();
+        }
+
     }
 }

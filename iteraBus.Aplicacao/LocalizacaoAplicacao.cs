@@ -54,5 +54,17 @@ namespace iteraBus.Aplicacao
 
             return localizacaoDominio;
         }
+
+        public async Task ExcluirLocalizacaoAsync(int localizacaoId)
+        {
+            var localizacaoDominio = await _localizacaoRepositorio.ObterLocalizacaoPorIdAsync(localizacaoId);
+
+            if (localizacaoDominio == null)
+            {
+                throw new Exception("Localização não encontrada.");
+            }
+
+            await _localizacaoRepositorio.ExcluirLocalizacaoAsync(localizacaoId);
+        }
     }
 }
