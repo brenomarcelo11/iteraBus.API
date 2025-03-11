@@ -10,6 +10,10 @@ namespace iteraBus.Repositorio.Contexto
         public DbSet<Localizacao> Localizacoes { get; set; }
         public DbSet<Rota> Rotas { get; set; }
 
+        public IteraBusContexto()
+        {
+        }
+
         public IteraBusContexto(DbContextOptions<IteraBusContexto> options) : base(options)
         {
         }

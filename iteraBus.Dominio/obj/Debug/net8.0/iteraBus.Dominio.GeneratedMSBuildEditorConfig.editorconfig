@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = iteraBus.Dominio
-build_property.ProjectDir = C:\iteraBus.API\iteraBus.API\iteraBus.Dominio\
+build_property.ProjectDir = C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Dominio\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {}
+    "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {}
   },
   "projects": {
-    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {
+    "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj",
+        "projectUniqueName": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj",
         "projectName": "iteraBus.Aplicacao",
-        "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj",
+        "projectPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\iteraBus.Aplicacao.csproj",
         "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-        "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\obj\\",
+        "outputPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Aplicacao\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj": {
-                "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj"
+              "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj": {
+                "projectPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
+    "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
+        "projectUniqueName": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
         "projectName": "iteraBus.Dominio",
-        "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
+        "projectPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
         "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-        "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\obj\\",
+        "outputPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -124,14 +124,14 @@
         }
       }
     },
-    "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj": {
+    "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj",
+        "projectUniqueName": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj",
         "projectName": "iteraBus.Repositorio",
-        "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj",
+        "projectPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\iteraBus.Repositorio.csproj",
         "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-        "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\obj\\",
+        "outputPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Repositorio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -146,8 +146,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
-                "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj"
+              "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj": {
+                "projectPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj"
               }
             }
           }
@@ -169,23 +169,23 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.2, )"
             }
           },
           "imports": [
