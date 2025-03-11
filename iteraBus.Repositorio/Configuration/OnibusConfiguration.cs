@@ -12,15 +12,10 @@ namespace iteraBus.Repositorio.Configuration
 
             builder.Property(nameof(Onibus.Id)).HasColumnName("OnibusId").IsRequired(true);
 
-            builder.Property(nameof(Onibus.Numero))
-            .HasColumnName("Número")
+            builder.Property(nameof(Onibus.Placa))
+            .HasColumnName("Placa")
             .IsRequired(true)
             .HasMaxLength(10);
-
-            builder.Property(nameof(Onibus.Linha))
-            .HasColumnName("Linha")
-            .IsRequired(true)
-            .HasMaxLength(50);
 
             builder.Property(nameof(Onibus.RotaId)).HasColumnName("Rota").IsRequired(true);
 

@@ -7,21 +7,20 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuração do banco de dados
+// Configuração do banco de dados com a string de conexão
 builder.Services.AddDbContext<IteraBusContexto>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 
-// Adicionando serviços da aplicação
+// Configuração de outros serviços (repositorios, controllers, etc)
 builder.Services.AddScoped<IOnibusAplicacao, OnibusAplicacao>();
 builder.Services.AddScoped<IOnibusRepositorio, OnibusRepositorio>();
-
 builder.Services.AddScoped<IRotaAplicacao, RotaAplicacao>();
 builder.Services.AddScoped<IRotaRepositorio, RotaRepositorio>();
-
 builder.Services.AddScoped<ILocalizacaoAplicacao, LocalizacaoAplicacao>();
 builder.Services.AddScoped<ILocalizacaoRepositorio, LocalizacaoRepositorio>();
 
-// Configuração do CORS
+// Configuração de CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("PermitirTudo",
@@ -30,14 +29,14 @@ builder.Services.AddCors(options =>
                         .AllowAnyHeader());
 });
 
-// Adicionando serviços da API
+// Configuração do Swagger e Controllers
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configuração do ambiente
+// Configuração de ambiente de desenvolvimento
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -30,8 +30,7 @@ namespace iteraBus.Aplicacao
                 throw new Exception("Onibus não encontrado.");
             }
 
-            onibusDominio.Linha = onibus.Linha;
-            onibusDominio.Numero = onibus.Numero;
+            onibusDominio.Placa = onibus.Placa;
             onibusDominio.Rota = onibus.Rota;
 
             await _onibusRepositorio.EditarOnibusAsync(onibusDominio);

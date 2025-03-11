@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
+      "projectUniqueName": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
       "projectName": "iteraBus.Dominio",
-      "projectPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
+      "projectPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\iteraBus.Dominio.csproj",
       "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
-      "outputPath": "C:\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\obj\\",
+      "outputPath": "C:\\Repositorios.IteraBus\\iteraBus.API\\iteraBus.API\\iteraBus.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config"

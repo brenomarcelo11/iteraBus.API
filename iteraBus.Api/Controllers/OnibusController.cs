@@ -27,8 +27,7 @@ namespace iteraBus.Api.Controllers
                 var onibusResposta = new OnibusResponse()
                 {
                     Id = onibusDominio.Id,
-                    Numero = onibusDominio.Numero,
-                    Linha = onibusDominio.Linha,
+                    Placa = onibusDominio.Placa,
                     RotaId = onibusDominio.RotaId
                 };
 
@@ -49,8 +48,7 @@ namespace iteraBus.Api.Controllers
             {
                 var onibusDominio = new Onibus()
                 {
-                    Numero = onibusCriar.Numero,
-                    Linha = onibusCriar.Linha,
+                    Placa = onibusCriar.Placa,
                     RotaId = onibusCriar.RotaId
                 };
                 
@@ -72,8 +70,7 @@ namespace iteraBus.Api.Controllers
                 var onibusDominio = new Onibus()
                 {
                     Id = onibusAtualizar.Id,
-                    Linha = onibusAtualizar.Linha,
-                    Numero = onibusAtualizar.Numero,
+                    Placa = onibusAtualizar.Placa,
                     RotaId = onibusAtualizar.RotaId
                 };
 
@@ -98,8 +95,7 @@ namespace iteraBus.Api.Controllers
                 var onibus = onibusDominio.Select(onibus => new OnibusResponse()
                 {
                     Id = onibus.Id,
-                    Numero = onibus.Numero,
-                    Linha = onibus.Linha,
+                    Placa = onibus.Placa,
                     RotaId = onibus.RotaId
                 }).ToList();
 
