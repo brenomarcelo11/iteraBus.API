@@ -65,7 +65,7 @@ namespace iteraBus.Api.Controllers
         [Route("Editar")]
         public async Task<IActionResult> EditarLocalizacaoAsync(LocalizacaoAtualizar localizacaoAtualizar)
         {
-            try 
+            try
             {
                 var localizacaoDominio = new Localizacao()
                 {
@@ -103,6 +103,21 @@ namespace iteraBus.Api.Controllers
                 return Ok(localizacoes);
             }
 
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("Deletar/{localizacaoId}")]
+        public async Task<IActionResult> ExcluirLocalizacaoAsync(int localizacaoId)
+        {
+            try
+            {
+                await _localizacaoAplicacao.ExcluirLocalizacaoAsync(localizacaoId);
+                return NoContent();
+            }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);

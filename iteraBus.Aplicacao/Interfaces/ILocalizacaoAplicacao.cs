@@ -8,5 +8,6 @@ namespace iteraBus.Aplicacao.Interfaces
         Task EditarLocalizacaoAsync(Localizacao localizacao);
         Task<IEnumerable<Localizacao>> ListarLocalizacaoAsync();
         Task<Localizacao> ObterLocalizacaoPorIdAsync(int localizacaoId);
+        Task ExcluirLocalizacaoAsync(int localizacaoId);
     }
 }

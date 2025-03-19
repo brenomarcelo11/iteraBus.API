@@ -51,5 +51,16 @@ namespace iteraBus.Aplicacao
 
             return onibusDominio;
         }
+
+        public async Task ExcluirOnibusAsync(int onibusId)
+        {
+            var onibusDominio = await _onibusRepositorio.ObterOnibusPorIdAsync(onibusId);
+            if (onibusDominio == null)
+            {
+                throw new Exception("Ônibus não encontrado.");
+            }
+
+           await _onibusRepositorio.ExcluirOnibusAsync(onibusId);
+        }
     }
 }
