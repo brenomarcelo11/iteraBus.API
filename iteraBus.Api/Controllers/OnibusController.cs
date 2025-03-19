@@ -51,7 +51,7 @@ namespace iteraBus.Api.Controllers
                     Placa = onibusCriar.Placa,
                     RotaId = onibusCriar.RotaId
                 };
-                
+
                 var onibusId = await _onibusAplicacao.AdicionarOnibusAsync(onibusDominio);
                 return Ok(onibusId);
             }
@@ -65,7 +65,8 @@ namespace iteraBus.Api.Controllers
         [HttpPut]
         [Route("Editar")]
         public async Task<IActionResult> EditarOnibusAsync([FromBody] OnibusAtualizar onibusAtualizar)
-        {   try 
+        {
+            try
             {
                 var onibusDominio = new Onibus()
                 {
@@ -106,5 +107,21 @@ namespace iteraBus.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpDelete]
+        [Route("Deletar/{onibusId}")]
+        public async Task<IActionResult> ExcluirOnibusAsync(int onibusId)
+        {
+            try
+            {
+                await _onibusAplicacao.ExcluirOnibusAsync(onibusId);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

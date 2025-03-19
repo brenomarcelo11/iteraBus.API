@@ -8,5 +8,7 @@ namespace iteraBus.Aplicacao.Interfaces
         Task EditarOnibusAsync(Onibus onibus);
         Task<IEnumerable<Onibus>> ListarOnibusAsync();
         Task<Onibus> ObterOnibusPorIdAsync(int onibusId);
+        Task ExcluirOnibusAsync(int onibusId);
+
     }
 }

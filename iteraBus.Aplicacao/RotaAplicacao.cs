@@ -38,7 +38,7 @@ namespace iteraBus.Aplicacao
                     if (!rotaDominio.Onibus.Any(o => o.Id == onibus.Id))
                     {
                         rotaDominio.Onibus.Add(onibus);
-                        onibus.RotaId = rota.Id;  
+                        onibus.RotaId = rota.Id;
                     }
                 }
             }
@@ -63,6 +63,18 @@ namespace iteraBus.Aplicacao
             }
 
             return rotaDominio;
+        }
+
+        public async Task ExcluirRotaAsync(int rotaId)
+        {
+            var rotaDominio = await _rotaRepositorio.ObterRotaPorIdAsync(rotaId);
+
+            if (rotaDominio == null)
+            {
+                throw new Exception("Rota não encontrada");
+            }
+
+            await _rotaRepositorio.ExcluirRotaAsync(rotaId);
         }
     }
 }

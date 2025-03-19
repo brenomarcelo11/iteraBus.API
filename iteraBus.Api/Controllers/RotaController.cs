@@ -85,7 +85,7 @@ namespace iteraBus.Api.Controllers
         [Route("Listar")]
         public async Task<IActionResult> ListarRotasAsync()
         {
-            try 
+            try
             {
                 var rotaDominio = await _rotaAplicacao.ListarRotasAsync();
                 var rotas = rotaDominio.Select(rotas => new RotaResponse()
@@ -97,6 +97,21 @@ namespace iteraBus.Api.Controllers
                 return Ok(rotas);
             }
 
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        [Route("Deletar/{rotaId}")]
+        public async Task<IActionResult> ExcluirRotaAsync(int rotaId)
+        {
+            try
+            {
+                await _rotaAplicacao.ExcluirRotaAsync(rotaId);
+                return NoContent();
+            }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
