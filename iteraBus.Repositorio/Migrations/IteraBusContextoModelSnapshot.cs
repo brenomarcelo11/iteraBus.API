@@ -84,6 +84,33 @@ namespace iteraBus.Repositorio.Migrations
                     b.ToTable("Onibus", (string)null);
                 });
 
+            modelBuilder.Entity("iteraBus.Dominio.Entidades.PontoDeOnibus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("Id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float")
+                        .HasColumnName("Latitude");
+
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float")
+                        .HasColumnName("Longitude");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Nome");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PontosDeOnibus", (string)null);
+                });
+
             modelBuilder.Entity("iteraBus.Dominio.Entidades.Rota", b =>
                 {
                     b.Property<int>("Id")

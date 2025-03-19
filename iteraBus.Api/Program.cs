@@ -1,5 +1,6 @@
 using iteraBus.Aplicacao;
 using iteraBus.Aplicacao.Interfaces;
+using iteraBus.Dominio.Repositorios;
 using iteraBus.Repositorio;
 using iteraBus.Repositorio.Contexto;
 using iteraBus.Repositorio.Inteface;
@@ -19,7 +20,8 @@ builder.Services.AddScoped<IRotaAplicacao, RotaAplicacao>();
 builder.Services.AddScoped<IRotaRepositorio, RotaRepositorio>();
 builder.Services.AddScoped<ILocalizacaoAplicacao, LocalizacaoAplicacao>();
 builder.Services.AddScoped<ILocalizacaoRepositorio, LocalizacaoRepositorio>();
-
+builder.Services.AddScoped<IPontoDeOnibusAplicacao, PontoDeOnibusAplicacao>();
+builder.Services.AddScoped<IPontoDeOnibusRepositorio, PontoDeOnibusRepositorio>();
 // Configuração de CORS
 builder.Services.AddCors(options =>
 {
