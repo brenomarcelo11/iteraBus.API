@@ -22,14 +22,11 @@ namespace iteraBus.Repositorio
             await _contexto.SaveChangesAsync();
         }
 
-        public async Task DeletarPontoAsync(int id)
+        public async Task ExcluirPontoAsync(int id)
         {
-            var ponto = await _contexto.PontosDeOnibus.FindAsync(id);
-            if (ponto != null)
-            {
-                _contexto.PontosDeOnibus.Remove(ponto);
-                await _contexto.SaveChangesAsync();
-            }
+           var pontoExcluido = await _contexto.PontosDeOnibus.FindAsync(id);
+            _contexto.PontosDeOnibus.Remove(pontoExcluido);
+            await _contexto.SaveChangesAsync();
         }
 
         public async Task<List<PontoDeOnibus>> ListarPontosAsync()

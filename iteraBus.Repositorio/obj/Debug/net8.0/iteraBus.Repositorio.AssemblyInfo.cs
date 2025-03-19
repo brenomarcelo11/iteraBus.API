@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iteraBus.Repositorio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c73c35e5325e8cb952631040799753c4917038f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7e62cb995399a77f301e823f70d7002a313d178")]
 [assembly: System.Reflection.AssemblyProductAttribute("iteraBus.Repositorio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iteraBus.Repositorio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

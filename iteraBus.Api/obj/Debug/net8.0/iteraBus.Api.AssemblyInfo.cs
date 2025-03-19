@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iteraBus.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b58a6f007cc451086f25fb79f31dbe40f9d2d83")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7e62cb995399a77f301e823f70d7002a313d178")]
 [assembly: System.Reflection.AssemblyProductAttribute("iteraBus.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iteraBus.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,6 @@ namespace iteraBus.Dominio.Repositorios
         Task<PontoDeOnibus> ObterPontoPorIdAsync(int id);
         Task<int> AdicionarPontoAsync(PontoDeOnibus ponto);
         Task AtualizarPontoAsync(PontoDeOnibus ponto);
-        Task DeletarPontoAsync(int id);
+        Task ExcluirPontoAsync(int id);
     }
 }
