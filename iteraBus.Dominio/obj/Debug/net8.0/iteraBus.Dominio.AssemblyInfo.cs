@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iteraBus.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7e62cb995399a77f301e823f70d7002a313d178")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61834a07afac0c0cbd9478dc1c636c2671686fb8")]
 [assembly: System.Reflection.AssemblyProductAttribute("iteraBus.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iteraBus.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
