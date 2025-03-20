@@ -48,5 +48,19 @@ namespace iteraBus.Repositorio
             await _contexto.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<Onibus>> ObterOnibusPorRotaIdAsync(int rotaId)
+        {
+            return await _contexto.Onibus
+                        .Where(o => o.RotaId == rotaId)
+                        .ToListAsync();
+        }
+
+        public async Task<IEnumerable<PontoDeOnibus>> ObterPontoDeOnibusPorRotaIdAsync(int rotaId)
+        {
+            return await _contexto.PontosDeOnibus
+                        .Where(p => p.RotaId == rotaId)
+                        .ToListAsync();
+        }
+
     }
 }

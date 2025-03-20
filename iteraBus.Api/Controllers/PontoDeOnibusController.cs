@@ -18,7 +18,7 @@ namespace iteraBus.Api.Controllers
 
         [HttpGet]
         [Route("Obter/{pontoId}")]
-        public async Task<IActionResult> ObterPontoPorId(int pontoId)
+        public async Task<IActionResult> ObterPontoPorIdAsync(int pontoId)
         {
             try
             {
@@ -49,7 +49,8 @@ namespace iteraBus.Api.Controllers
                 {
                     Nome = pontoDeOnibusCriar.Nome,
                     Latitude = pontoDeOnibusCriar.Latitude,
-                    Longitude = pontoDeOnibusCriar.Longitude
+                    Longitude = pontoDeOnibusCriar.Longitude,
+                    RotaId = pontoDeOnibusCriar.RotaId
                 };
 
                 var pontoId = await _pontoDeOnibusAplicacao.AdicionarPontoAsync(pontoDeOnibusDominio);

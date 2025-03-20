@@ -18,6 +18,11 @@ namespace iteraBus.Repositorio.Configuration
             .WithOne(o => o.Rota)
             .HasForeignKey(o => o.RotaId)
             .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(r => r.PontosDeOnibus)
+            .WithOne(p => p.Rota)
+            .HasForeignKey(p => p.RotaId)
+            .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

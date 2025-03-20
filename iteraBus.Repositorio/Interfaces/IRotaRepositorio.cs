@@ -9,6 +9,7 @@ namespace iteraBus.Repositorio.Inteface
         Task<IEnumerable<Rota>> ListarRotasAsync();
         Task<Rota> ObterRotaPorIdAsync(int rotaId);
         Task ExcluirRotaAsync(int rotaId);
-
+        Task<IEnumerable<Onibus>> ObterOnibusPorRotaIdAsync(int rotaId);
+        Task<IEnumerable<PontoDeOnibus>> ObterPontoDeOnibusPorRotaIdAsync(int rotaId);
     }
 }

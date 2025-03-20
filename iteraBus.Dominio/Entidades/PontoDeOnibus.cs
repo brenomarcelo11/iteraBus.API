@@ -6,5 +6,7 @@ namespace iteraBus.Dominio.Entidades
         public string Nome { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public int RotaId { get; set; }
+        public Rota Rota { get; set; }
     }
 }

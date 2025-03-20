@@ -89,7 +89,7 @@ namespace iteraBus.Repositorio.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("Id");
+                        .HasColumnName("PontoDeOnibusId");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
@@ -106,7 +106,12 @@ namespace iteraBus.Repositorio.Migrations
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("Nome");
 
+                    b.Property<int>("RotaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("RotaId");
 
                     b.ToTable("PontosDeOnibus", (string)null);
                 });
@@ -152,6 +157,17 @@ namespace iteraBus.Repositorio.Migrations
                     b.Navigation("Rota");
                 });
 
+            modelBuilder.Entity("iteraBus.Dominio.Entidades.PontoDeOnibus", b =>
+                {
+                    b.HasOne("iteraBus.Dominio.Entidades.Rota", "Rota")
+                        .WithMany("PontosDeOnibus")
+                        .HasForeignKey("RotaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rota");
+                });
+
             modelBuilder.Entity("iteraBus.Dominio.Entidades.Onibus", b =>
                 {
                     b.Navigation("Localizacoes");
@@ -160,6 +176,8 @@ namespace iteraBus.Repositorio.Migrations
             modelBuilder.Entity("iteraBus.Dominio.Entidades.Rota", b =>
                 {
                     b.Navigation("Onibus");
+
+                    b.Navigation("PontosDeOnibus");
                 });
 #pragma warning restore 612, 618
         }
