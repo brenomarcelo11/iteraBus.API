@@ -30,8 +30,7 @@ namespace iteraBus.Repositorio.Migrations
                 {
                     OnibusId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Número = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
-                    Linha = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Placa = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     Rota = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -40,6 +39,28 @@ namespace iteraBus.Repositorio.Migrations
                     table.ForeignKey(
                         name: "FK_Onibus_Rotas_Rota",
                         column: x => x.Rota,
+                        principalTable: "Rotas",
+                        principalColumn: "RotaId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PontosDeOnibus",
+                columns: table => new
+                {
+                    PontoDeOnibusId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Latitude = table.Column<double>(type: "float", nullable: false),
+                    Longitude = table.Column<double>(type: "float", nullable: false),
+                    RotaId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PontosDeOnibus", x => x.PontoDeOnibusId);
+                    table.ForeignKey(
+                        name: "FK_PontosDeOnibus_Rotas_RotaId",
+                        column: x => x.RotaId,
                         principalTable: "Rotas",
                         principalColumn: "RotaId",
                         onDelete: ReferentialAction.Cascade);
@@ -76,6 +97,11 @@ namespace iteraBus.Repositorio.Migrations
                 name: "IX_Onibus_Rota",
                 table: "Onibus",
                 column: "Rota");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_PontosDeOnibus_RotaId",
+                table: "PontosDeOnibus",
+                column: "RotaId");
         }
 
         /// <inheritdoc />
@@ -83,6 +109,9 @@ namespace iteraBus.Repositorio.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Localização");
+
+            migrationBuilder.DropTable(
+                name: "PontosDeOnibus");
 
             migrationBuilder.DropTable(
                 name: "Onibus");

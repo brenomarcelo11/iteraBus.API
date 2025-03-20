@@ -62,6 +62,12 @@ namespace iteraBus.Aplicacao
                 throw new Exception("Rota não encontrada.");
             }
 
+            var onibus = await _rotaRepositorio.ObterOnibusPorRotaIdAsync(rotaId);
+            rotaDominio.Onibus = onibus.ToList();
+
+            var pontosDeOnibus = await _rotaRepositorio.ObterPontoDeOnibusPorRotaIdAsync(rotaId);
+            rotaDominio.PontosDeOnibus = pontosDeOnibus.ToList();
+
             return rotaDominio;
         }
 

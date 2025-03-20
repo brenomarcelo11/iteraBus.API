@@ -26,7 +26,15 @@ namespace iteraBus.Api.Controllers
                 var rotaResponse = new RotaResponse()
                 {
                     Id = rotaDominio.Id,
-                    Nome = rotaDominio.Nome
+                    Nome = rotaDominio.Nome,
+                    OnibusIds = rotaDominio.Onibus?.Select(o => o.Id).ToList(),
+                    PontosDeOnibus = rotaDominio.PontosDeOnibus?.Select(p => new PontoDeOnibusResponse
+                    {
+                        Id = p.Id,
+                        Nome = p.Nome,
+                        Latitude = p.Latitude,
+                        Longitude = p.Longitude,
+                    }).ToList()
                 };
 
                 return Ok(rotaResponse);
@@ -46,7 +54,9 @@ namespace iteraBus.Api.Controllers
             {
                 var rotaDominio = new Rota()
                 {
-                    Nome = rotaCriar.Nome
+                    Nome = rotaCriar.Nome,
+                    Onibus = rotaCriar.OnibusIds?.Select(id => new Onibus { Id = id }).ToList(),
+                    PontosDeOnibus = rotaCriar.PontosDeOnibusIds?.Select(id => new PontoDeOnibus{Id = id}).ToList()
                 };
 
                 var rotaId = await _rotaAplicacao.AdicionarRotaAsync(rotaDominio);
@@ -68,7 +78,9 @@ namespace iteraBus.Api.Controllers
                 var rotaDominio = new Rota()
                 {
                     Id = rotaAtualizar.Id,
-                    Nome = rotaAtualizar.Nome
+                    Nome = rotaAtualizar.Nome,
+                    Onibus = rotaAtualizar.OnibusIds?.Select(id => new Onibus { Id = id }).ToList(),
+                    PontosDeOnibus = rotaAtualizar.PontosDeOnibusIds?.Select(id => new PontoDeOnibus { Id = id }).ToList()
                 };
 
                 await _rotaAplicacao.EditarRotaAsync(rotaDominio);
@@ -91,7 +103,15 @@ namespace iteraBus.Api.Controllers
                 var rotas = rotaDominio.Select(rotas => new RotaResponse()
                 {
                     Id = rotas.Id,
-                    Nome = rotas.Nome
+                    Nome = rotas.Nome,
+                    OnibusIds = rotas.Onibus?.Select(o => o.Id).ToList(),
+                    PontosDeOnibus = rotas.PontosDeOnibus?.Select(p => new PontoDeOnibusResponse
+                    {
+                        Id = p.Id,
+                        Nome = p.Nome,
+                        Latitude = p.Latitude,
+                        Longitude = p.Longitude,
+                    }).ToList()
                 }).ToList();
 
                 return Ok(rotas);
