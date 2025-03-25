@@ -28,7 +28,8 @@ namespace iteraBus.Api.Controllers
                     Id = pontoDeOnibusDominio.Id,
                     Nome = pontoDeOnibusDominio.Nome,
                     Latitude = pontoDeOnibusDominio.Latitude,
-                    Longitude = pontoDeOnibusDominio.Longitude
+                    Longitude = pontoDeOnibusDominio.Longitude,
+                    RotaId = pontoDeOnibusDominio.RotaId
                 };
 
                 return Ok(pontoDeOnibusResponse);
@@ -73,7 +74,8 @@ namespace iteraBus.Api.Controllers
                     Id = pontoDeOnibusAtualizar.Id,
                     Latitude = pontoDeOnibusAtualizar.Latitude,
                     Longitude = pontoDeOnibusAtualizar.Longitude,
-                    Nome = pontoDeOnibusAtualizar.Nome
+                    Nome = pontoDeOnibusAtualizar.Nome,
+                    RotaId = pontoDeOnibusAtualizar.RotaId
                 };
 
                 await _pontoDeOnibusAplicacao.EditarPontoAsync(pontoDeOnibusDominio);
@@ -98,7 +100,8 @@ namespace iteraBus.Api.Controllers
                     Id = ponto.Id,
                     Latitude = ponto.Latitude,
                     Longitude = ponto.Longitude,
-                    Nome = ponto.Nome
+                    Nome = ponto.Nome,
+                    RotaId = ponto.RotaId
                 }).ToList();
 
                 return Ok(pontos);

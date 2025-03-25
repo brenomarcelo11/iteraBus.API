@@ -82,5 +82,20 @@ namespace iteraBus.Aplicacao
 
             await _rotaRepositorio.ExcluirRotaAsync(rotaId);
         }
+
+        public async Task<IEnumerable<PontoDeOnibus>> ObterPontoDeOnibusPorRotaIdAsync(int rotaId)
+        {
+            try
+            {
+                var listaRotas = await _rotaRepositorio.ObterPontoDeOnibusPorRotaIdAsync(rotaId);
+
+                return listaRotas;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
