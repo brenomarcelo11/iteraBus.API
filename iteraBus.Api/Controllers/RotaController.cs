@@ -111,6 +111,7 @@ namespace iteraBus.Api.Controllers
                         Nome = p.Nome,
                         Latitude = p.Latitude,
                         Longitude = p.Longitude,
+                        RotaId = p.RotaId
                     }).ToList()
                 }).ToList();
 
@@ -137,5 +138,29 @@ namespace iteraBus.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        // [HttpGet]
+        // [Route("ObterPontoPorRotaId{rotaId}")]
+        // public async Task<IActionResult> ObterPontoDeOnibusPorRotaIdAsync(int rotaId)
+        // {
+        //     try 
+        //     {
+        //         var rotasDominio = await _rotaAplicacao.ObterPontoDeOnibusPorRotaIdAsync(rotaId);
+        //         var rotas = rotasDominio.Select(rota => new RotaResponse()
+        //         {
+        //             Id = rota.Id,
+        //             Nome = rota.Nome,
+        //             PontosDeOnibus = rota.PontosDeOnibus,
+
+
+        //         }
+        //         )
+        //     }
+
+        //     catch (Exception ex)
+        //     {
+        //         throw new Exception(ex.Message);
+        //     }
+        // }
     }
 }

@@ -31,7 +31,10 @@ namespace iteraBus.Repositorio
 
         public async Task<IEnumerable<Rota>> ListarRotasAsync()
         {
-            return await _contexto.Rotas.ToListAsync();
+            return await _contexto.Rotas
+            .Include(r => r.Onibus)
+            .Include(r => r.PontosDeOnibus)
+            .ToListAsync();
         }
 
         public async Task<Rota> ObterRotaPorIdAsync(int rotaId)
