@@ -135,6 +135,51 @@ namespace iteraBus.Repositorio.Migrations
                     b.ToTable("Rotas", (string)null);
                 });
 
+            modelBuilder.Entity("iteraBus.Dominio.Entidades.Usuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("UsuarioId");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit")
+                        .HasColumnName("Ativo");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Email");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Nome");
+
+                    b.Property<string>("Senha")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("Senha");
+
+                    b.Property<int>("TipoUsuarioId")
+                        .HasColumnType("int")
+                        .HasColumnName("TipoUsuarioId");
+
+                    b.Property<DateTime?>("TokenExpiracao")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("TokenExpiracao");
+
+                    b.Property<string>("TokenRecuperacao")
+                        .HasColumnType("nvarchar(max)")
+                        .HasColumnName("TokenRecuperacao");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Usuario", (string)null);
+                });
+
             modelBuilder.Entity("iteraBus.Dominio.Entidades.Localizacao", b =>
                 {
                     b.HasOne("iteraBus.Dominio.Entidades.Onibus", "Onibus")

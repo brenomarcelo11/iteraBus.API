@@ -10,6 +10,7 @@ namespace iteraBus.Repositorio.Contexto
         public DbSet<Localizacao> Localizacoes { get; set; }
         public DbSet<Rota> Rotas { get; set; }
         public DbSet<PontoDeOnibus> PontosDeOnibus { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
         public IteraBusContexto()
         {
@@ -33,6 +34,7 @@ namespace iteraBus.Repositorio.Contexto
             modelBuilder.ApplyConfiguration(new LocalizacaoConfiguration());
             modelBuilder.ApplyConfiguration(new RotaConfiguration());
             modelBuilder.ApplyConfiguration(new PontoDeOnibusConfiguration());
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
         }
     }
 }
