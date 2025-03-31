@@ -5,6 +5,7 @@ using iteraBus.Repositorio;
 using iteraBus.Repositorio.Contexto;
 using iteraBus.Repositorio.Inteface;
 using Microsoft.EntityFrameworkCore;
+using Projeto360.Aplicacao;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,8 @@ builder.Services.AddScoped<ILocalizacaoAplicacao, LocalizacaoAplicacao>();
 builder.Services.AddScoped<ILocalizacaoRepositorio, LocalizacaoRepositorio>();
 builder.Services.AddScoped<IPontoDeOnibusAplicacao, PontoDeOnibusAplicacao>();
 builder.Services.AddScoped<IPontoDeOnibusRepositorio, PontoDeOnibusRepositorio>();
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IUsuarioAplicacao, UsuarioAplicacao>();
 // Configuração de CORS
 builder.Services.AddCors(options =>
 {
