@@ -5,6 +5,10 @@ using iteraBus.Repositorio;
 using iteraBus.Repositorio.Contexto;
 using iteraBus.Repositorio.Inteface;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Projeto360.Aplicacao;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +18,42 @@ builder.Services.AddDbContext<IteraBusContexto>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-// Configuração de outros serviços (repositorios, controllers, etc)
+// Adiciona a autenticação JWT
+var jwtIssuer = builder.Configuration["Jwt:Issuer"];
+var jwtAudience = builder.Configuration["Jwt:Audience"];
+var jwtKey = builder.Configuration["Jwt:Key"];
+
+if (string.IsNullOrEmpty(jwtIssuer) || string.IsNullOrEmpty(jwtAudience) || string.IsNullOrEmpty(jwtKey))
+{
+    throw new Exception("Configuração JWT ausente no appsettings.json ou variáveis de ambiente.");
+}
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+        };
+    });
+
+// Configuração de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirFrontend", policy =>
+        policy.WithOrigins("http://localhost:3000") // Permite apenas a origem do React
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials()); // Permite envio de cookies/tokens via credenciais
+});
+
+// Configuração dos serviços
 builder.Services.AddScoped<IOnibusAplicacao, OnibusAplicacao>();
 builder.Services.AddScoped<IOnibusRepositorio, OnibusRepositorio>();
 builder.Services.AddScoped<IRotaAplicacao, RotaAplicacao>();
@@ -25,19 +64,40 @@ builder.Services.AddScoped<IPontoDeOnibusAplicacao, PontoDeOnibusAplicacao>();
 builder.Services.AddScoped<IPontoDeOnibusRepositorio, PontoDeOnibusRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 builder.Services.AddScoped<IUsuarioAplicacao, UsuarioAplicacao>();
-// Configuração de CORS
-builder.Services.AddCors(options =>
+
+// Configuração do Swagger com autenticação JWT
+builder.Services.AddSwaggerGen(c =>
 {
-    options.AddPolicy("PermitirTudo",
-        policy => policy.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader());
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "IteraBus API", Version = "v1" });
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] { }
+        }
+    });
 });
 
-// Configuração do Swagger e Controllers
+// Configuração dos controllers
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -49,8 +109,10 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("PermitirTudo");
-app.UseAuthorization();
+app.UseCors("PermitirFrontend");  // CORS precisa vir antes de autenticação e autorização
+app.UseAuthentication();  // Ativa autenticação JWT
+app.UseAuthorization();   // Ativa autorização
+
 app.MapControllers();
 
 app.Run();
