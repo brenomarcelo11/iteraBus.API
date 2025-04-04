@@ -154,3 +154,6 @@ C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\obj\Debug\net8.0
 C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\obj\Debug\net8.0\iteraBus.Api.pdb
 C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\obj\Debug\net8.0\iteraBus.Api.genruntimeconfig.cache
 C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\obj\Debug\net8.0\ref\iteraBus.Api.dll
+C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Repositorios.IteraBus\iteraBus.API\iteraBus.API\iteraBus.Api\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll

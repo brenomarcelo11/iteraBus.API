@@ -10,6 +10,7 @@ namespace iteraBus.Dominio.Entidades
         public int TipoUsuarioId { get; set; }
         public string TokenRecuperacao { get; set; }
         public DateTime? TokenExpiracao { get; set; }
+        public List<Rota> RotasFavoritas { get; set; } = new List<Rota>();
 
         public Usuario()
         {

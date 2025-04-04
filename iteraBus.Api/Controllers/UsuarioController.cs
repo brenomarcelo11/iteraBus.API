@@ -91,7 +91,7 @@ namespace iteraBus.Api
                 return BadRequest(ex.Message);
             }
         }
-     
+
         [HttpDelete]
         [Route("Deletar/{usuarioId}")]
         public async Task<ActionResult> DeletarAsync([FromRoute] int usuarioId)
@@ -147,6 +147,36 @@ namespace iteraBus.Api
             {
 
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        [Route("{usuarioId}/favoritar-rota/{rotaId}")]
+        public async Task<IActionResult> FavoritarRota(int usuarioId, int rotaId)
+        {
+            try
+            {
+                await _usuarioAplicacao.FavoritarRotaAsync(usuarioId, rotaId);
+                return Ok(new { mensagem = "Rota favoritada com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { erro = ex.Message });
+            }
+        }
+
+        [HttpDelete]
+        [Route("{usuarioId}/desfavoritar-rota/{rotaId}")]
+        public async Task<IActionResult> DesfavoritarRota(int usuarioId, int rotaId)
+        {
+            try
+            {
+                await _usuarioAplicacao.DesfavoritarRotaAsync(usuarioId, rotaId);
+                return Ok(new { mensagem = "Rota desfavoritada com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { erro = ex.Message });
             }
         }
     }

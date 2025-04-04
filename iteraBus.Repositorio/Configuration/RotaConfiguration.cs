@@ -23,6 +23,10 @@ namespace iteraBus.Repositorio.Configuration
             .WithOne(p => p.Rota)
             .HasForeignKey(p => p.RotaId)
             .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(r => r.UsuariosQueFavoritaram)
+            .WithMany(u => u.RotasFavoritas)
+            .UsingEntity(j => j.ToTable("UsuarioRotasFavoritas"));
         }
     }
 }

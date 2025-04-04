@@ -9,4 +9,6 @@ public interface IUsuarioRepositorio
     Task<Usuario> ObterPorEmailAsync(string email);
     Task<Usuario> ObterPorTokenAsync(string token);
     Task<IEnumerable<Usuario>> ListarAsync(bool ativo);
+    Task FavoritarRotaAsync(int usuarioId, int rotaId);
+    Task DesfavoritarRotaAsync(int usuarioId, int rotaId);
 }

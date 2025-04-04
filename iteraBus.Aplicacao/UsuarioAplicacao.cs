@@ -44,7 +44,7 @@ namespace Projeto360.Aplicacao
             usuarioDominio.Email = usuario.Email;
             usuarioDominio.TipoUsuarioId = usuario.TipoUsuarioId;
             // alteracao
-        
+
 
             await _usuarioRepositorio.AtualizarAsync(usuarioDominio);
         }
@@ -131,6 +131,24 @@ namespace Projeto360.Aplicacao
         public async Task<IEnumerable<Usuario>> ListarAsync(bool ativo)
         {
             return await _usuarioRepositorio.ListarAsync(ativo);
+        }
+
+        public async Task FavoritarRotaAsync(int usuarioId, int rotaId)
+        {
+            var usuario = await _usuarioRepositorio.ObterPorIdAsync(usuarioId);
+            if (usuario == null)
+                throw new Exception("Usuário não encontrado.");
+
+            await _usuarioRepositorio.FavoritarRotaAsync(usuarioId, rotaId);
+        }
+
+        public async Task DesfavoritarRotaAsync(int usuarioId, int rotaId)
+        {
+            var usuario = await _usuarioRepositorio.ObterPorIdAsync(usuarioId);
+            if (usuario == null)
+                throw new Exception("Usuário não encontrado.");
+
+            await _usuarioRepositorio.DesfavoritarRotaAsync(usuarioId, rotaId);
         }
 
 

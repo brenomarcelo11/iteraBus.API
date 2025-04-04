@@ -18,6 +18,12 @@ namespace iteraBus.Repositorio.Configuration
             builder.Property(nameof(Usuario.TipoUsuarioId)).HasColumnName("TipoUsuarioId").IsRequired(true);
             builder.Property(nameof(Usuario.TokenExpiracao)).HasColumnName("TokenExpiracao");
             builder.Property(nameof(Usuario.TokenRecuperacao)).HasColumnName("TokenRecuperacao");
+
+            builder
+                .HasMany(u => u.RotasFavoritas)
+                .WithMany(r => r.UsuariosQueFavoritaram)
+                .UsingEntity(j => 
+                    j.ToTable("UsuarioRotasFavoritas"));
         }
     }
 }

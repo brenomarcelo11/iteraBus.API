@@ -6,5 +6,6 @@ namespace iteraBus.Dominio.Entidades
         public string Nome { get; set; }
         public List<Onibus> Onibus { get; set; } = new List<Onibus>();
         public List<PontoDeOnibus> PontosDeOnibus { get; set; } = new List<PontoDeOnibus>();
+        public List<Usuario> UsuariosQueFavoritaram { get; set; } = new List<Usuario>();
     }
 }
